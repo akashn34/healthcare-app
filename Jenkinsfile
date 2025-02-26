@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/akashn34/healthcare-backend.git'
+                git brach: 'develop', credentialsId: 'github-credentials', url: 'https://github.com/akashn34/healthcare-backend.git'
             }
         }
         stage('Build Docker Image') {
